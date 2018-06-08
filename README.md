@@ -96,4 +96,4 @@ In addition to the altered loss function, I also weighted each class such that l
 Data was randomly brightened, randomly cropped, randomly rotated, and randomly flipped. See helper.py for details. Also I searched every training image to find the max and min heights in which road or car appeared and only trained on those parts of the image to narrow the field and give more class balance to cars and less to void.
 
 ### Inference
-During inference, rather than take the argmax from the output of the softmax layer to determine predictions, I use my own thresholding to control precision and recall more precisely. Also, I use a Gaussian Blue kernel on the cars because often the model has trouble locating the entire car and it seems to improve recall without a great expense to precision.
+During inference, rather than take the argmax from the output of the softmax layer to determine predictions, I use my own thresholding to control precision and recall more precisely. Also, I use a Gaussian Blur kernel on the cars because often the model has trouble locating the entire car and it seems to improve recall without a great expense to precision.
