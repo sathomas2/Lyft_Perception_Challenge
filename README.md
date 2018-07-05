@@ -1,7 +1,7 @@
 ### Overview
 ![readme_GIF](readme_imgs/readme.gif)
 
-The [Lyft Perception Challenge](https://www.udacity.com/lyft-challenge) was a Semantic Segmentation competition that ran during May 2018. The goal of the competition was to identify each pixel in a video stream from the [CARLA simulator](http://carla.org/) as vehicle, drivable road, or void in near real time, at least 10fps. Top Contenders were awarded an interview at Lyft's Level-5 Autonomous Team. Since I was a Top Contender, I decided to share my code and writeup online in the form of this GitHub repo. I used a variation of Google's DeepLabV3 with ResNet-152 pretrained on ImageNet as the backbone. Below I will discuss my tactics.
+The [Lyft Perception Challenge](https://www.udacity.com/lyft-challenge) was a Semantic Segmentation competition that ran during May 2018. The goal of the competition was to identify each pixel in a video stream from the [CARLA simulator](http://carla.org/) as vehicle, drivable road, or void in near real time, at least 10fps. Top Contenders were awarded an interview at Lyft's Level-5 Autonomous Team. Since I was a Top Contender, I decided to share my code and writeup online in the form of this GitHub repo. I used a variation of [Google's DeepLabV3](https://arxiv.org/pdf/1706.05587.pdf) with ResNet-152 pretrained on ImageNet as the backbone. Below I will discuss my tactics.
 
 The contents of my submission include:
 ```
