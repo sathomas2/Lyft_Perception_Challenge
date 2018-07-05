@@ -1,5 +1,7 @@
 ### Overview
-For the Lyft Perception Challenge, I used a variation of Google's DeepLabV3 with ResNet-152 pretrained on ImageNet as the backbone. Below I will discuss my tactics. Unfortunately, I didn't have access to the CARLA simulator (mainly, I didn't want to rent out more GPU space for costs), so I coudln't create additional data. This was a big mistake I made early on. I should have collected more data. I believe that with extra data, I could have squeezed out the extra points to give me an average weighted F-score in the low 90s. Oh well. Live and learn. Next time...
+![readme_GIF](readme_imgs/readme.gif)
+
+The Lyft Perception Challenge was a Semantic Segmentation competition that ran during May 2018. The goal of the competition was to identify each pixel in a video stream as vehicle, drivable road, or void in near real time, at least 10fps.Top Contenders were awarded an interview at Lyft's Level-5 Autonomous Team. Since I was a Top Contender, I decided to share my code and writeup online in the form of this GitHub repo. I used a variation of Google's DeepLabV3 with ResNet-152 pretrained on ImageNet as the backbone. Below I will discuss my tactics.
 
 The contents of my submission include:
 ```
@@ -97,3 +99,6 @@ Data was randomly brightened, randomly cropped, randomly rotated, and randomly f
 
 ### Inference
 During inference, rather than take the argmax from the output of the softmax layer to determine predictions, I use my own thresholding to control precision and recall more precisely. Also, I use a Gaussian Blur kernel on the cars because often the model has trouble locating the entire car and it seems to improve recall without a great expense to precision.
+
+### Room for Improvement
+Unfortunately, I didn't have access to the CARLA simulator (mainly, I didn't want to rent out more GPU space for costs), so I coudln't create additional data. This was a big mistake I made early on. I should have collected more data. I believe that with extra data, I could have squeezed out the extra points to place higher on the leaderboard. Oh well. Live and learn. Next time...
